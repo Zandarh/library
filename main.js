@@ -126,8 +126,10 @@ function updateStatus(e, book){
 
 const btn = document.querySelector('#btn');
 const myDialog = document.querySelector('#myDialog');
+const overlay = document.querySelector('.overlay');
 
 btn.addEventListener('click', (event) => {
+    overlay.style.display = "block";
     myDialog.showModal();
 });
 
@@ -155,6 +157,7 @@ dialogBtn.addEventListener('submit', (event) => {
     checkbox.checked = false;
     makeNewObject(bookTitle, bookAuthor, bookPages, checked);
     dialogBtn.reset();
+    overlay.style.display = "none";
 
 });
 
