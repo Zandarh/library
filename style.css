@@ -81,6 +81,7 @@ div.container .book-container{
     gap: 20px;
     justify-content: center;
     width: 100%;
+    padding: 10px;
 }
 
 div.book-container .books{
