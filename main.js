@@ -171,3 +171,10 @@ function makeNewObject(bookTitle, bookAuthor, bookPages, checked){
     addBookToLibrary(book);
     displayBookOnScreen(myLibrary);
 }
+
+const closeDialog = document.querySelector('.close');
+
+closeDialog.addEventListener('click', () =>{
+    myDialog.close();
+    overlay.style.display = "none";
+});
