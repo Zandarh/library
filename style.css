@@ -123,15 +123,17 @@ div.dailog-container{
     top: 50%;
     bottom: 50%;
     position: absolute;
-    border: 1px solid red;
-    background-color: black;
     z-index: 11;
+    
 }
 .dialog{
     position: relative;
-    width: 300px;
+    width: 200px;
     margin: auto;
-    height: 400px;
+    height: 280px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--header-bg);
 
 }
 .overlay{
@@ -142,5 +144,46 @@ div.dailog-container{
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: rgb(46, 15, 102, 0.4);
+    background-color: rgb(46, 15, 102, 0.899);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+form > input[type=text],
+form > input[type=number]{
+    height: 1.4rem;
+    padding: 5px;
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;   
+    outline: none; 
+}
+form > button{
+    padding: 5px;
+    font-size: 1rem;
+    background-color: var(--header-bg);
+    color: var(--heading-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+form > button:hover{
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    background-color: transparent;
+}
+form > h3{
+    text-align: center;
+    color: var(--header-bg);
+}
+.check{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+form .check > label{
+    font-size: 0.8rem;
+    text-align: center;
 }

@@ -30,14 +30,13 @@
         <dialog id="myDialog" class="dialog">
             <form id="myForm" action="">
                 <h3 class="heading">Add a New Book</h3>
-                <label for="title">Title:</label>
-                <input id="bookTitle" type="text" name="title" placeholder="Book title" required>
-                <label for="author">Author:</label>
-                <input type="text" name="author" id="bookAuthor" placeholder="Book Author" required>
-                <label for="pages">Pages:</label>
-                <input type="number" name="pages" id="bookPages" placeholder="Book Pages" required>
-                <input type="checkbox" name="read" id="readOrNot">
-                <label for="read">Have you read this book?</label>
+                <input id="bookTitle" type="text" name="title" placeholder="Title" required>
+                <input type="text" name="author" id="bookAuthor" placeholder="Author" required>
+                <input type="number" name="pages" id="bookPages" placeholder="Pages" required>
+                <div class="check">
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" name="read" id="readOrNot">
+                </div>
                 <button type="submit" id="dialogBtn" formmethod="dialog">Add Book</button>          
             </form>
         </dialog>
