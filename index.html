@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="img/vecteezy_old-book-clipart-design-illustration_9384264.png" alt="">
+                <h3>Z-Library</h3>
+            </div>
+            <div class="add">
+                <button id="btn"><img src="img/plus.svg"/></button>
+            </div>
+        </div>
+        <div class="book-heading">
+            <H1>All Books</H1>
+        </div>
+        <div class="book-container">
+            <div class="books">
+            </div>
+        </div>
+    </div>
+    <dialog id="myDialog">
+        <form id="myForm" action="">
+            <h3 class="heading">Add a New Book</h3>
+            <label for="title">Title:</label>
+            <input id="bookTitle" type="text" name="title" placeholder="Book title" required>
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="bookAuthor" placeholder="Book Author" required>
+            <label for="pages">Pages:</label>
+            <input type="number" name="pages" id="bookPages" placeholder="Book Pages" required>
+            <input type="checkbox" name="read" id="readOrNot">
+            <label for="read">Have you read this book?</label>
+            <button type="submit" id="dialogBtn" formmethod="dialog">Add Book</button>          
+        </form>
+    </dialog>
+
+    <script src="main.js"></script>
+</body>
+</html>
