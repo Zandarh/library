@@ -19,9 +19,14 @@ Book.prototype.toggleReadStatus = function(){
 
 const book1 = new Book("Born a Crime", "Trevor Noah", "304", "Completed");
 const book2 = new Book("Outliers", "Malcolm Gladwell", "304", "Completed");
+const book3 = new Book("12 Rules of Life", "Jordan Peterson", "448", "Not Read")
+const book4 = new Book("All Marketer are Liars", "Seth Godin", "240", "Not Read")
+
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
+addBookToLibrary(book3);
+addBookToLibrary(book4);
 displayBookOnScreen(myLibrary);
 
 // add each new book object to the Library array
@@ -49,7 +54,7 @@ function displayBookOnScreen(myLibrary){
         books.setAttribute("class", "books");
 
         const title = document.createElement('h3');
-        title.textContent = `Title: ${book.title}`;
+        title.textContent = `${book.title}`;
         title.setAttribute("class", "title");
         books.append(title);
 
@@ -59,7 +64,7 @@ function displayBookOnScreen(myLibrary){
         books.append(author);
 
         const pages = document.createElement('h4');
-        pages.textContent = `Pages: ${book.pages}`;
+        pages.textContent = `${book.pages} pages`;
         pages.setAttribute("class", "pages");
         books.append(pages);
 
