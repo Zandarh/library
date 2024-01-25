@@ -140,22 +140,43 @@ btn.addEventListener('click', (event) => {
     myDialog.showModal();
 });
 
-
+function theCustomError(e){
+    console.log(e.target);
+}
 const dialogBtn = document.querySelector('#myForm');
+const title = document.querySelector('#bookTitle');
+const author = document.querySelector('#bookAuthor');
+const pages = document.querySelector('#bookPages');
+const checkbox = document.querySelector('#readOrNot');
+
+// Form Validation
+title.addEventListener("input", (event) => {
+    showError(title, "title");
+});
+
+author.addEventListener("input", (event) => {
+    showError(author, "author");
+});
+
+pages.addEventListener("input", (event) => {
+    showError(pages, "pages");
+});
+
+
+function showError(node, nodeLabel){
+    if (node.validity.valueMissing){
+        node.setCustomValidity(`The Book ${nodeLabel} is Required`);
+    } else {
+        node.setCustomValidity("");
+    }
+}
 
 dialogBtn.addEventListener('submit', (event) => {
-
-    // The modal Element
-    const title = document.querySelector('#bookTitle')
     const bookTitle = title.value;
-
-    const author = document.querySelector('#bookAuthor')
     const bookAuthor = author.value;
-
-    const pages = document.querySelector('#bookPages');
     const bookPages = pages.value;
+   
 
-    const checkbox = document.querySelector('#readOrNot');
     let checked = '';
     if (checkbox.checked)
         checked += 'Completed';
