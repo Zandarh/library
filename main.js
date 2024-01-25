@@ -140,9 +140,6 @@ btn.addEventListener('click', (event) => {
     myDialog.showModal();
 });
 
-function theCustomError(e){
-    console.log(e.target);
-}
 const dialogBtn = document.querySelector('#myForm');
 const title = document.querySelector('#bookTitle');
 const author = document.querySelector('#bookAuthor');
